@@ -1,0 +1,36 @@
+<div id="container">
+    <h1>Personal Information</h1>
+
+    <div id="details">
+        <div class="info">
+            <h1>Username</h1>
+            <div>
+                <p>
+                    <%= user.displayName %>
+                </p>
+            </div>
+        </div>
+        <div class="info">
+            <h1>Email</h1>
+            <div>
+                <p>
+                    <%= user._json.email %>
+                </p>
+            </div>
+        </div>
+        <div class="info">
+            <h1>Account</h1>
+            <div>
+                <p style="text-transform: capitalize;">
+                    <%= user.provider %>
+                </p>
+            </div>
+        </div>
+        <div class="info">
+            <h1>Password</h1>
+            <div>
+                <a href="/user/updatePassword/<%= user.id %>">Update<img src="/svgs/edit.svg" class="svg" alt=""></a>
+            </div>
+        </div>
+    </div>
+</div>

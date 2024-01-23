@@ -1,0 +1,32 @@
+<div id="container">
+    <h1>Register</h1>
+    <form id="form" action="/user/register" method="post">
+
+        <div id="username-input-div">
+            <label for="username">Username:</label>
+            <input type="text" required name="username" id="name-input">
+        </div>
+        <div id="email-input-div">
+            <label for="email">Email:</label>
+            <input type="email" required name="email" id="email-input">
+        </div>
+        <div id="password-input-div">
+            <label for="password">Password:</label>
+            <input type="password" required name="password" class="password-input">
+        </div>
+        <div id="confirPassword-div">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" required name="confirmPassword" class="password-input">
+        </div>
+        <div id="submit-btn-div">
+            <button type="submit" class="form-button">Register</button>
+        </div>
+        <div id="misc-btn-div">
+            <p>Already have an account?</p>
+            <a href="/user/login"><button class="form-button" type="button">Login</button></a>
+        </div>
+    </form>
+    <% if(msg){ %>
+        <h2 style="color: black;"><%= msg %></h2>
+      <% } %>
+</div>

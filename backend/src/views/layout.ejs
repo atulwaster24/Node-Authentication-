@@ -1,0 +1,54 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/layout.css">
+    <title><%= title %></title>
+  </head>
+  <body>
+    <nav>
+      <h1 id="nav-header">Authentication</h1>
+      <ul>
+        <li><a href="/">Home</a></li>
+
+        
+        <% if(isLogged){ %>
+            <li><div class="dropdown-div" style="position: relative;">
+          <button id="dropdown-btn" onclick="toggleMenu(event)">
+            <% if(user.provider){ %>
+              <%= user.displayName %>
+            <% }else{ %>
+              <%= user %>
+            <% } %>
+            
+          </button>
+          <div id="dropdown-content" class="inactive">
+            <a href="/user/profile/<%=user%>">Account</a>
+            <a href="/user/logout">Logout</a>
+          </div>
+        </div></li>
+        <% }else{ %>
+          <li><a href="/user/login">Login</a></li>
+          <li><a href="/user/register">Register</a></li>
+        <% } %>
+      </ul>
+    </nav>
+
+    <%- body %>
+
+    <script>
+      const dropdownBtn = document.getElementById('dropdown-btn');
+      const drodownMenu = document.getElementById('dropdown-content');
+
+      function toggleMenu(){
+        event.preventDefault();
+        console.log('clicked')
+        if(drodownMenu.classList[0] == 'inactive'){
+          drodownMenu.classList.replace('inactive', 'active');
+        }else{
+          drodownMenu.classList.replace('active', 'inactive');
+        }
+      }
+    </script>
+  </body>
+</html>

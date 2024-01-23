@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    padding: 0 8rem 0 2rem;
+    display: flex;
+    background-color: plum;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1{
+    font-size: 2.2rem;
+    font-weight: bolder;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+    list-style-type: none;
+}
+
+.inactive{
+    display: none;
+}
+
+.active{
+    margin-top: 0.05rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+    background-color: plum;
+    padding: 0.7rem 0;
+    border-radius: 10px;
+}
+
+#dropdown-content{
+    position: absolute;
+    border: 1px solid black;
+    width: 100%;
+}
+
+
+
+li > a, button, .active a{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: black;
+    background-color: transparent;
+    transition: color 0.2s ease-in-out, border 0.2s ease-in-out;
+    border: 1px solid white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+}
+
+li > a:hover, button:hover, .active a:hover{
+    color: white;
+    border: 1px solid black;
+}
+
+
+/* Login Form Styling */
+#form{
+    border: 2px solid gray;
+    font-size: 1.2rem;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+#form > div{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin: 0.75rem 0;
+}
+
+#submit-btn-div{
+    display: flex;
+    justify-content: center;
+}
+
+.form-button{
+    background-color: black;
+    font-size: 1rem;
+    padding: 0.4rem 1rem;
+    color: white;
+    border: 2px solid coral;
+    border-radius: 12px;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, border 0.4s ease-in-out;
+}
+
+.form-button:hover{
+    background-color: blanchedalmond;
+    color: black;
+    border: 2px solid aqua;
+}
+
+#misc-btn-div{
+    display: flex;
+    align-items: center;
+}
+
+.svg{
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+#oauth{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+#oauth > div{
+    display: flex;
+    gap: 0.5rem;
+}
+
+#details{
+    padding: 2rem 4rem;
+    min-width: 40%;
+    border: 2px solid palevioletred;
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+}
+
+.info{
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.info> div{
+    width: 100%;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.info  a {
+    display: flex;
+    align-items: center;
+}
+

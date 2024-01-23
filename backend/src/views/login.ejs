@@ -1,0 +1,38 @@
+<div id="container">
+    
+    <h1>Login</h1>
+    <div id="login-div">
+        <form id="form" action="/user/login" method="post">
+            <div id="email-input-div">
+                <label for="email">Email:</label>
+                <input type="email" required name="email" id="email-input">
+            </div>
+            <div id="password-input-div">
+                <label for="password">Password:</label>
+                <input type="password" required name="password" id="password-input">
+            </div>
+            <div id="submit-btn-div">
+                <button type="submit" class="form-button">Login</button>
+            </div>
+            <div id="forgetPassword">
+                <a href="/user/forgetPassword">Forget Password?</a>
+            </div>
+            <div id="misc-btn-div">
+                <p>Don't have an account?</p>
+                <a href="/user/register"><button class="form-button" type="button">Register</button></a>
+            </div>
+
+            <% if(msg){ %>
+                <h3 style="color: black; border: 2px solid red; border-radius: 14px;"><%= msg %></h3>
+              <% } %>
+        </form>
+        <div id="oauth">
+            <h2>Login with</h2>
+            <div>
+                <a href="/user/auth/google"><img src="/svgs/google.svg" class="svg" alt="Google"></a>
+            </div>
+        </div>
+    </div>
+    
+   
+</div>
